@@ -5,23 +5,29 @@ const button = document.querySelector('.startButton');
 const fonts = document.querySelectorAll('.additional');
 const start = document.querySelector(".startButton");
 const finish = document.querySelector(".finish");
-const l = new pos();
-l.initialValue = [200, 200];
+const heightEngine = new pos(-100);
 
 function disappearButton() {
     start.classList.toggle("active");
     finish.classList.add("active");
 };
+
 start.addEventListener("click", disappearButton);
 
 button.addEventListener('click', () => {
     fonts.forEach(font => {
         font.classList.add('active');
+        getItemHeight(font)
     })
 })
 
+function getItemHeight(item){
+const posY = item.getBoundingClientRect().y;
+heightEngine.initialValue = posY
+}
 
 function photoMove(e) {
+    heightEngine.comparecoords(photoDog);
     const radius = 350 / 2;
     const posX = e.pageX - radius;
     const documentWidth = window.innerWidth;
@@ -31,3 +37,6 @@ function photoMove(e) {
 }
 
 photoDog.addEventListener("mousemove", photoMove);
+
+heightEngine.elementNode = fonts;
+heightEngine.startEngine();
