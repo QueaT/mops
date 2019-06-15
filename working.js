@@ -1,11 +1,18 @@
 const photoDog = document.querySelector(".image--dog");
 const button = document.querySelector('button');
-const bone = document.querySelector('.fa-bone');
+const fonts = document.querySelectorAll('.fas');
+const start = document.querySelector(".startButton");
 
+function disappearButton(){
+start.classList.toggle("active");
+}
+start.addEventListener("click", disappearButton);
 
 
 button.addEventListener('click',()=>{
-  bone.classList.add('active');
+fonts.forEach(font =>{
+   font.classList.add('active');
+  })
 })
 function photoMove(e) {
     const radius = 350 / 2;

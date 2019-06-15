@@ -5,9 +5,10 @@
 }
 body{
     background-image: url("background.jpg");
+    background-size: cover;
     width: 100%;
     height: 100%;
-    background-size: cover;
+    overflow: hidden;
 }
 .container{
     width: 100vw;
@@ -69,4 +70,29 @@ img{
 }
 .food{
     width: 100vw;
+}
+button{
+    font-size: 45px;
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 200px);
+    transform: (-50%, -50%);
+    padding: 40px;
+    background-color: rgb(219, 255, 253);
+    text-transform: uppercase;
+    color: rgb(233, 56, 203);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    line-height: 50px;
+    width: 400px;
+    transform: scale(1);
+} 
+.startButton.active{
+    top: 0;
+    left: 0;
+    transition: .2s linear;
+    transform: scale(.2);
 }
