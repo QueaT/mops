@@ -6,16 +6,12 @@ const fonts = document.querySelectorAll('.additional');
 const start = document.querySelector(".startButton");
 const finish = document.querySelector(".finish");
 const l = new pos();
-l.initialValue = [200,200];
+l.initialValue = [200, 200];
 
-function disappearButton(){
-start.classList.toggle("active");
-finish.classList.add("active");
 function disappearButton() {
     start.classList.toggle("active");
     finish.classList.add("active");
-
-}
+};
 start.addEventListener("click", disappearButton);
 
 button.addEventListener('click', () => {
