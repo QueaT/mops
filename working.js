@@ -1,10 +1,12 @@
 const photoDog = document.querySelector(".image--dog");
-const button = document.querySelector('button');
-const fonts = document.querySelectorAll('.fas');
+const button = document.querySelector('.startButton');
+const fonts = document.querySelectorAll('.additional');
 const start = document.querySelector(".startButton");
+const finish = document.querySelector(".finish");
 
 function disappearButton(){
 start.classList.toggle("active");
+finish.classList.add("active");
 }
 start.addEventListener("click", disappearButton);
 
