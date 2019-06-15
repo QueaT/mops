@@ -1,4 +1,4 @@
-import pos from '../positionOfElementengine.js';
+import pos from './positionOfElementengine.js';
 
 const photoDog = document.querySelector(".image--dog");
 const button = document.querySelector('.startButton');
