@@ -1,21 +1,29 @@
-const photoDog = document.querySelector(".image--dog");
-const button = document.querySelector('button');
-const fonts = document.querySelectorAll('.fas');
-const start = document.querySelector(".startButton");
+import pos from '../positionOfElementengine.js';
 
+const photoDog = document.querySelector(".image--dog");
+const button = document.querySelector('.startButton');
+const fonts = document.querySelectorAll('.additional');
+const start = document.querySelector(".startButton");
+const finish = document.querySelector(".finish");
+const l = new pos();
+l.initialValue = [200,200];
+
+function disappearButton(){
+start.classList.toggle("active");
+finish.classList.add("active");
 function disappearButton() {
     start.classList.toggle("active");
+    finish.classList.add("active");
+
 }
 start.addEventListener("click", disappearButton);
-
 
 button.addEventListener('click', () => {
     fonts.forEach(font => {
         font.classList.add('active');
-        const elementY = font.getClientRects()[0].top
-        console.log(elementY);
     })
 })
+
 
 function photoMove(e) {
     const radius = 350 / 2;
