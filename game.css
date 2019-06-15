@@ -149,7 +149,7 @@ img{
     top: 0;
     left: 84vw;
     transition: .6s linear;
-    transform: scale(.2);
+    transform: scale(.3);
 }
 .finish{
     color: rgb(230, 23, 85);
@@ -173,4 +173,70 @@ img{
 }
 .mouse{
     color: aqua;
+}
+.instruction{
+    background-color: rgb(219, 255, 253);
+    text-transform: uppercase;
+    color: rgb(233, 56, 203);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    line-height: 40px;
+    width: 150px;
+    font-size: 13px;
+    margin: 30px;
+    transform: scale(1);
+    transition: .2s linear;
+}
+.instruction:hover{
+transform: scale(1.1);
+background-image: linear-gradient(to top,  #aed7fd 0%, rgb(219, 255, 253) 100%);
+}
+p{
+    font-size: 33px;
+    width: 100vw;
+    position: absolute;
+    top: 35%;
+    color: red;
+    letter-spacing: 2px;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 2;
+    text-align: center;
+}
+.photo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 900px;
+    z-index: 1;
+    height: auto;
+}
+span{
+    font-size: 33px;
+    width: 100vw;
+    position: absolute;
+    top: 45%;
+    color: red;
+    letter-spacing: 2px;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 2;
+    text-align: center;
+}
+.fa-arrows-alt-h{
+    font-size: 80px;
+    width: 100vw;
+    position: absolute;
+    top: 51%;
+    color: red;
+    z-index: 2;
+    text-align: center;
+}
+.notes{
+    opacity: 0;
+}
+.notes.active{
+    opacity: 1;
 }

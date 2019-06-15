@@ -3,6 +3,8 @@ const button = document.querySelector('.startButton');
 const fonts = document.querySelectorAll('.additional');
 const start = document.querySelector(".startButton");
 const finish = document.querySelector(".finish");
+const buttonInstruction = document.querySelector(".instruction");
+const nots = document.querySelector(".notes");
 
 function disappearButton(){
 start.classList.toggle("active");
@@ -26,3 +28,9 @@ function photoMove(e) {
 }
 
 photoDog.addEventListener("mousemove", photoMove);
+
+function showInstruction(){
+nots.classList.toggle("active");
+}
+
+buttonInstruction.addEventListener("click",showInstruction);
