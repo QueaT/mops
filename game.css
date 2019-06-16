@@ -13,7 +13,9 @@ body{
 .container{
     width: 100vw;
 }
-img{
+
+
+img{ 
     height: auto;
     cursor: pointer;
     width: 350px;
@@ -171,9 +173,7 @@ img{
     opacity: 1;
     transition: .3s 31s linear;
 }
-.mouse{
-    color: aqua;
-}
+
 .instruction{
     background-color: rgb(219, 255, 253);
     text-transform: uppercase;

@@ -30,7 +30,7 @@ class PositionOfElement {
         this.elmNodes = elm
     }
 
-    comparecoords(posOfDog) {
+    compareCoords(posOfDog) {
         this.dogPosY = posOfDog.getBoundingClientRect().y;
         this.dogHeight = posOfDog.getBoundingClientRect().height;
         this.dogPosX = posOfDog.getBoundingClientRect().x;

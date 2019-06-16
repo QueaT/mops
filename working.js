@@ -8,7 +8,7 @@ const finish = document.querySelector(".finish");
 const buttonInstruction = document.querySelector(".instruction");
 const nots = document.querySelector(".notes");
 const heightEngine = new pos(-100);
-
+//do poprawy :)
 function disappearButton() {
     start.classList.toggle("active");
     finish.classList.add("active");
@@ -29,7 +29,7 @@ heightEngine.initialValue = posY
 }
 
 function photoMove(e) {
-    heightEngine.comparecoords(photoDog);
+    heightEngine.compareCoords(photoDog);
     const radius = 350 / 2;
     const posX = e.pageX - radius;
     const documentWidth = window.innerWidth;
