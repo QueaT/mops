@@ -17,17 +17,10 @@ start.addEventListener("click", disappearButton);
 button.addEventListener('click', () => {
     fonts.forEach(font => {
         font.classList.add('active');
-        getItemHeight(font)
     })
 })
 
-function getItemHeight(item){
-const posY = item.getBoundingClientRect().y;
-heightEngine.initialValue = posY
-}
-
 function photoMove(e) {
-    heightEngine.comparecoords(photoDog);
     const radius = 350 / 2;
     const posX = e.pageX - radius;
     const documentWidth = window.innerWidth;
@@ -38,5 +31,10 @@ function photoMove(e) {
 
 photoDog.addEventListener("mousemove", photoMove);
 
-heightEngine.elementNode = fonts;
-heightEngine.startEngine();
+
+
+(function startGame(){
+    heightEngine.dogElement = photoDog;
+    heightEngine.elementNode = fonts;
+    heightEngine.startEngine();
+})();
