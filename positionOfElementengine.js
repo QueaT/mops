@@ -10,7 +10,7 @@ class PositionOfElement {
         this.arrayOfNodes.forEach((node, index) => {
             const cordY = node.getBoundingClientRect().y
             const cordX = Math.floor(node.getBoundingClientRect().x);
-            this.compareCoords(this._dog, node, cordY, cordX);
+            this.compareCoords(this._dog, node, cordY, cordX, index);
 
         })
     }
@@ -22,31 +22,36 @@ class PositionOfElement {
         }
     }
 
-    compareCoords(posOfDog, node, cordY, cordX) {
+    compareCoords(posOfDog, node, cordY, cordX, index) {
         const dogPosY = this.getPositions(posOfDog).posY;
         const dogPosX = this.getPositions(posOfDog).posX;
         const dogHeight = this.getPositions(posOfDog, dogPosY).height;
         const detectColisionY = dogPosY >= cordY && dogHeight <= cordY;
-        const detectColisionX = dogPosX + 350 >= cordX && dogPosX <= cordX
-        if (detectColisionY && detectColisionX) {
+        const detectColisionX = dogPosX + 350 >= cordX && dogPosX <= cordX;
+        this.checkIfColisionHappend(detectColisionX,detectColisionY,node,index)
+    }
+
+    checkIfColisionHappend(detectX,detectY,node,index){
+        if (detectY && detectX) {
             this.checkIfWin(node)
+            this.arrayOfNodes.splice(index, 1);
             node.style.display = 'none';
         }
     }
     checkIfWin(node) {
         if (node.dataset.key) {
-            this.arrayOfNodes.forEach(node =>{
+            this.arrayOfNodes.forEach(node => {
                 node.style.display = 'none';
             })
-             this.stopEngine();
+            this.stopEngine();
         }
     }
     startEngine() {
-       this.engine = setInterval(() => {
+        this.engine = setInterval(() => {
             this.repeatOfCheckingElementPos();
         }, 50)
     }
-    stopEngine(){
+    stopEngine() {
         clearInterval(this.engine)
     }
 }
