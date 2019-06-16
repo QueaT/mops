@@ -1,55 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="game.css" type="text/css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="game.css" type="text/css" />
 </head>
+
 <body>
     <div class="food">
-        <i data-key="die" class="fas fa-bone additional"></i>
-        <i class="fas fa-spider additional"></i>
+        <i class="fas fa-bone additional"></i>
+        <i data-key="die" class="fas fa-spider additional"></i>
         <i class="fas fa-hotdog additional"></i>
-        <i class="fas fa-hammer additional"></i>
+        <i data-key="die" class="fas fa-hammer additional"></i>
         <i class="fas fa-fish additional "></i>
         <i data-key="die" class="fas fa-bomb  additional"></i>
         <i class="fas fa-pizza-slice additional"></i>
         <i class="fas fa-apple-alt additional"></i>
         <i class="fas fa-hamburger additional"></i>
-        <i class="fas fa-football-ball additional"></i>
-        <i class="fas fa-stamp additional"></i>
+        <i data-key="die" class="fas fa-football-ball additional"></i>
+        <i data-key="die" class="fas fa-stamp additional"></i>
         <i class="fas fa-cheese additional"></i>
         <i class="fas fa-carrot additional"></i>
-        <i class="fab fa-fort-awesome"></i>
+        <i data-key="die" class="fab fa-fort-awesome"></i>
         <i class="fas fa-ice-cream additional"></i>
-        <i class="fas fa-puzzle-piece additional"></i>
-        <div>
-<button class="instruction">How to play</button>
-<div>
-<p>You have to avoid dangerous items</p>
-<span>You move with the mouse 
-    <i class="fas a fa-arrow-left mouse"></i> 
-    <i class="fas a fa-mouse-pointer mouse"></i>
-    <i class="fas a fa-arrow-right mouse"></i>
-</span>
-</br>
-<span class="user-score"></span>
-</div>
-</div>
+        <i data-key="die" class="fas fa-puzzle-piece additional"></i>
+        <button class="instruction">How to play</button>
+    </div>
+
+    <div class="notes">
+        <div class="bcg--notes">
+            <img class="photo" src="note.png"></img>
+            <div class="photo__text">
+                <p>You have to avoid dangerous items!</p>
+                <span>You move with the mouse (left & right)</span>
+                <p>You have only 3 lifes!</p>
+                <i class="fas fa-arrows-alt-h"></i>
+            </div>
+        </div>
     </div>
     <div class="finish">
-    <h1>Congratulations - YOU WIN!</h1>
+        <h1>Congratulations - YOU WIN!</h1>
+        </div>
+    <div class="main--button">
+    <button class="startButton">start</button>
 </div>
-     <button class="startButton">start</button>
     <div class="container">
-    <img class="image--dog" src="dog.jpg"></img>
+        <img class="image--dog" src="dog.jpg"></img>
     </div>
 
 
 <script type="module" src="working.js"></script>
 </body>
+
 </html>

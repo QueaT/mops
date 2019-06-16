@@ -13,10 +13,12 @@ body{
 .container{
     width: 100vw;
 }
-img{
+
+
+.image--dog{ 
     height: auto;
     cursor: pointer;
-    width: 350px;
+    width: 23%;
     position: absolute;
     bottom: 0;
 }
@@ -126,6 +128,9 @@ img{
 .food{
     width: 100vw;
 }
+.main--button{
+    display: flex;
+}
 .startButton{
     font-size: 45px;
     position: absolute;
@@ -149,7 +154,7 @@ img{
     top: 0;
     left: 84vw;
     transition: .6s linear;
-    transform: scale(.2);
+    transform: scale(.3);
 }
 .finish{
     color: rgb(230, 23, 85);
@@ -171,6 +176,63 @@ img{
     opacity: 1;
     transition: .3s 31s linear;
 }
-.mouse{
-    color: aqua;
+
+.instruction{
+    background-color: rgb(219, 255, 253);
+    text-transform: uppercase;
+    color: rgb(233, 56, 203);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    line-height: 40px;
+    width: 150px;
+    font-size: 13px;
+    margin: 30px;
+    transform: scale(1);
+    transition: .2s linear;
+}
+.instruction:hover{
+transform: scale(1.1);
+background-image: linear-gradient(to top,  #aed7fd 0%, rgb(219, 255, 253) 100%);
+}
+.photo{
+    width: 900px;
+    height: auto;
+}
+
+.notes{
+    font-size: 33px;
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    color: red;
+    justify-content: center;
+    align-items: flex-start;
+}
+    .bcg--notes{
+        position: relative;
+    }
+.photo__text{
+    text-align: center;
+    position: absolute;
+    word-spacing: 2px;
+    width: 544px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: calc(50% - 100px);
+    left: calc(50% - 272px);
+    margin-bottom: 3rem;
+}
+.photo__text i {
+    position: static;
+}
+.notes.active{
+    display: flex;
+    transition: .3s linear;
 }

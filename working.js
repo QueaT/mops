@@ -6,14 +6,15 @@ const fonts = document.querySelectorAll('.additional');
 const start = document.querySelector(".startButton");
 const finish = document.querySelector(".finish");
 const txt = document.querySelector('.user-score');
+const buttonInstruction = document.querySelector(".instruction");
+const nots = document.querySelector(".notes");
 const heightEngine = new Position(-100);
-
-function disappearButton() {
-    start.classList.toggle("active");
+function buttonMove() {
+    start.classList.add("active");
     finish.classList.add("active");
 };
 
-start.addEventListener("click", disappearButton);
+start.addEventListener("click", buttonMove);
 
 button.addEventListener('click', () => {
     const arrayOfDelays = [];
@@ -44,6 +45,12 @@ function photoMove(e) {
 }
 
 photoDog.addEventListener("mousemove", photoMove);
+
+function showInstruction(){
+nots.classList.toggle("active");
+}
+
+buttonInstruction.addEventListener("click",showInstruction);
 
 
 
