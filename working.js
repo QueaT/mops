@@ -9,12 +9,12 @@ const buttonInstruction = document.querySelector(".instruction");
 const nots = document.querySelector(".notes");
 const heightEngine = new pos(-100);
 //do poprawy :)
-function disappearButton() {
-    start.classList.toggle("active");
+function buttonMove() {
+    start.classList.add("active");
     finish.classList.add("active");
 };
 
-start.addEventListener("click", disappearButton);
+start.addEventListener("click", buttonMove);
 
 button.addEventListener('click', () => {
     fonts.forEach(font => {
