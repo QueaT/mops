@@ -1,4 +1,4 @@
-import pos from './positionOfElementengine.js';
+import Position from './positionOfElementengine.js';
 
 const photoDog = document.querySelector(".image--dog");
 const button = document.querySelector('.startButton');
@@ -7,8 +7,7 @@ const start = document.querySelector(".startButton");
 const finish = document.querySelector(".finish");
 const buttonInstruction = document.querySelector(".instruction");
 const nots = document.querySelector(".notes");
-const heightEngine = new pos(-100);
-//do poprawy :)
+const heightEngine = new Position(-100);
 function buttonMove() {
     start.classList.add("active");
     finish.classList.add("active");
@@ -17,10 +16,23 @@ function buttonMove() {
 start.addEventListener("click", buttonMove);
 
 button.addEventListener('click', () => {
+    const arrayOfDelays = [];
     fonts.forEach(font => {
+        font.style.transitionDelay = genereteRandomDelay(30,1,arrayOfDelays) + 's';
+        arrayOfDelays.push(parseInt(font.style.transitionDelay));
         font.classList.add('active');
     })
 })
+
+
+function genereteRandomDelay(max, min,accualValues) {
+    const randomNum =  Math.floor(Math.random() * max) + min;
+    if(accualValues.includes(randomNum)){
+       return genereteRandomDelay(max,min,accualValues)
+    }else{
+        return randomNum;
+    }
+}
 
 function photoMove(e) {
     const radius = 350 / 2;
@@ -41,7 +53,7 @@ buttonInstruction.addEventListener("click",showInstruction);
 
 
 
-(function startGame(){
+(function startGame() {
     heightEngine.dogElement = photoDog;
     heightEngine.elementNode = fonts;
     heightEngine.startEngine();
