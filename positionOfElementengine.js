@@ -1,10 +1,15 @@
 class PositionOfElement {
-    constructor() {}
+    constructor() {
+        this._score = 0;
+    }
     set dogElement(dog) {
         this._dog = dog;
     }
     set elementNode(elm) {
         this.arrayOfNodes = [...elm];
+    }
+    set scoreInfo(score){
+        this._scoreElement = score;
     }
     repeatOfCheckingElementPos() {
         this.arrayOfNodes.forEach((node, index) => {
@@ -36,6 +41,7 @@ class PositionOfElement {
             this.checkIfWin(node)
             this.arrayOfNodes.splice(index, 1);
             node.style.display = 'none';
+            this.addToScore();
         }
     }
     checkIfWin(node) {
@@ -45,6 +51,10 @@ class PositionOfElement {
             })
             this.stopEngine();
         }
+    }
+    addToScore(){
+        this._score++;
+        this._scoreElement.textContent = this._score;
     }
     startEngine() {
         this.engine = setInterval(() => {

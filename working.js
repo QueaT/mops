@@ -5,6 +5,7 @@ const button = document.querySelector('.startButton');
 const fonts = document.querySelectorAll('.additional');
 const start = document.querySelector(".startButton");
 const finish = document.querySelector(".finish");
+const txt = document.querySelector('.user-score');
 const heightEngine = new Position(-100);
 
 function disappearButton() {
@@ -47,6 +48,7 @@ photoDog.addEventListener("mousemove", photoMove);
 
 
 (function startGame() {
+    heightEngine._scoreElement = txt;
     heightEngine.dogElement = photoDog;
     heightEngine.elementNode = fonts;
     heightEngine.startEngine();
