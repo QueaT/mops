@@ -1,43 +1,44 @@
 class PositionOfElement {
-    constructor(state) {
-        this.elm;
-        this._state = state;
-        this._elements = [];
-        this._stateOfCoords = [];
+    constructor() {
+    }
+    set dogElement(dog) {
+        this._dog = dog;
+    }
+    repeatOfCheckingElementPos() {
+        this.arrayOfNodes.forEach((node, index) => {
+            const cordY = node.getBoundingClientRect().y
+            const cordX = Math.floor(node.getBoundingClientRect().x);
+            this.compareCoords(this._dog, node, cordY, cordX);
+
+        })
+    }
+    set elementNode(elm) {
+        this.elmNodes = elm;
+        this.arrayOfNodes = [...this.elmNodes];
+    }
+    getPositions(posOfDog, dogYpos) {
+        return {
+            posY: Math.floor(posOfDog.getBoundingClientRect().y),
+            posX: Math.floor(posOfDog.getBoundingClientRect().x),
+            height: Math.floor(dogYpos - posOfDog.getBoundingClientRect().height / 5),
+        }
     }
 
-    set initialValue(initial) {
-        this._elements.push(initial)
+    compareCoords(posOfDog, node, cordY, cordX) {
+        const dogPosY = this.getPositions(posOfDog).posY;
+        const dogPosX = this.getPositions(posOfDog).posX;
+        const dogHeight = this.getPositions(posOfDog, dogPosY).height;
+        const detectColisionY = dogPosY >= cordY && dogHeight <= cordY;
+        const detectColisionX = dogPosX + 350 >= cordX && dogPosX <= cordX
+        if (detectColisionY && detectColisionX) {
+            console.log('kolizja')
+            node.style.display = 'none';
+        }
     }
     startEngine() {
         setInterval(() => {
             this.repeatOfCheckingElementPos();
-        }, 100)
-    }
-    repeatOfCheckingElementPos() {
-        this.elmNodes.forEach(node => {
-            if (this._state !== node.getBoundingClientRect().y) {
-                this.cordY = Math.floor(node.getBoundingClientRect().y);
-                if (!this._stateOfCoords.includes(this.cordY)) {
-                   // console.log(this.cordY);
-                }
-                this._stateOfCoords.push(this.cordY);
-
-            }
-        })
-    }
-    set elementNode(elm) {
-        this.elmNodes = elm
-    }
-
-    compareCoords(posOfDog) {
-        this.dogPosY = posOfDog.getBoundingClientRect().y;
-        this.dogHeight = posOfDog.getBoundingClientRect().height;
-        this.dogPosX = posOfDog.getBoundingClientRect().x;
-        console.log(this.dogPosX);
-         if(this.dogPos <= this.cordY){
-             console.log('ok')
-         }
+        }, 50)
     }
 }
 
