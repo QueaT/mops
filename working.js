@@ -1,11 +1,11 @@
-import pos from './positionOfElementengine.js';
+import Position from './positionOfElementengine.js';
 
 const photoDog = document.querySelector(".image--dog");
 const button = document.querySelector('.startButton');
 const fonts = document.querySelectorAll('.additional');
 const start = document.querySelector(".startButton");
 const finish = document.querySelector(".finish");
-const heightEngine = new pos(-100);
+const heightEngine = new Position(-100);
 
 function disappearButton() {
     start.classList.toggle("active");
@@ -15,10 +15,23 @@ function disappearButton() {
 start.addEventListener("click", disappearButton);
 
 button.addEventListener('click', () => {
+    const arrayOfDelays = [];
     fonts.forEach(font => {
+        font.style.transitionDelay = genereteRandomDelay(30,1,arrayOfDelays) + 's';
+        arrayOfDelays.push(parseInt(font.style.transitionDelay));
         font.classList.add('active');
     })
 })
+
+
+function genereteRandomDelay(max, min,accualValues) {
+    const randomNum =  Math.floor(Math.random() * max) + min;
+    if(accualValues.includes(randomNum)){
+       return genereteRandomDelay(max,min,accualValues)
+    }else{
+        return randomNum;
+    }
+}
 
 function photoMove(e) {
     const radius = 350 / 2;
@@ -33,7 +46,7 @@ photoDog.addEventListener("mousemove", photoMove);
 
 
 
-(function startGame(){
+(function startGame() {
     heightEngine.dogElement = photoDog;
     heightEngine.elementNode = fonts;
     heightEngine.startEngine();

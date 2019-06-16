@@ -34,90 +34,90 @@ img{
     color: rgb(65, 58, 58);
     left: 2%;
     top: -100px;
-    transition:3s 2s linear;
+    transition:3s  linear;
 }
 .fa-hotdog{
     color: rgb(233, 167, 27);
     left: 79%;
     top: -100px;
-    transition:3s 5s linear;
+    transition:3s  linear;
 }
 .fa-fish{
     color: rgb(67, 67, 238);
     left: 48%;
     top: -100px;
-    transition:3s 8s linear;
+    transition:3s  linear;
 }
 .fa-bomb{
     color: rgb(155, 0, 0);
     left: 90%;
     top: -100px;
-    transition:3s 10s linear;
+    transition:3s  linear;
 }
 .fa-pizza-slice{
     color: rgba(255, 0, 179, 0.952);
     left: 12%;
     top: -100px;
-    transition:3s 12s linear;
+    transition:3s  linear;
 }
 .fa-apple-alt{
     color: rgb(38, 230, 38);
     left: 30%;
     top: -100px;
-    transition:3s 14s linear;
+    transition:3s  linear;
 }
 .fa-hammer{
     left: 25%;
     top: -100px;
-    transition:3s 16s linear;
+    transition:3s  linear;
 }
 .fa-hamburger{
     color: #bb8640;
     top: -100px;
     left: 36%;
-    transition: 3s 23.5s linear;
+    transition: 3s linear;
 }
 .fa-football-ball{
     color: rgb(99, 50, 50);
     top: -100px;
     left: 9%;
-    transition: 3s 9s linear;
+    transition: 3s  linear;
 }
     .fa-stamp{
         color: rgb(49, 49, 49);
         top: -100px;
         left: 70%;
-        transition: 3s 12s linear; 
+        transition: 3s  linear; 
     }
     .fa-cheese{
         color: rgb(245, 226, 56);
         top: -100px;
         left: 42%;
-        transition: 3s 22s linear; 
+        transition: 3s linear; 
     }
     .fa-carrot{
         left: 60%;
         color: rgb(255, 136, 0);
         top: -100px;
-        transition: 3s 20s linear; 
+        transition: 3s linear; 
     }
     .fa-fort-awesome{
         left: 83%;
         color: rgb(120, 42, 172);
         top: -100px;
-        transition: 3s 24s linear; 
+        transition: 3s linear; 
     }
     .fa-ice-cream{
         left: 74%;
         color: rgb(216, 152, 200);
         top: -100px;
-        transition: 3s 26s linear; 
+        transition: 3s  linear; 
     }
     .fa-puzzle-piece{
         left: 55%;
         color: rgb(186, 211, 128);
         top: -100px;
-        transition: 3s 28s linear; 
+        transition: 3s  linear; 
     }
     .fas.active,
     .fab.active{
