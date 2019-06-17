@@ -1,9 +1,8 @@
 class PositionOfElement {
-    constructor() {
-        this._score = 0;
-    }
+    #score = 0;
+    #dog;
     set dogElement(dog) {
-        this._dog = dog;
+        this.dog = dog;
     }
     set elementNode(elm) {
         this.arrayOfNodes = [...elm];
@@ -11,11 +10,15 @@ class PositionOfElement {
     set scoreInfo(score){
         this._scoreElement = score;
     }
+    get pictureWidth(){
+        return this.dog.getBoundingClientRect().width;
+     }
+
     repeatOfCheckingElementPos() {
         this.arrayOfNodes.forEach((node, index) => {
             const cordY = node.getBoundingClientRect().y
             const cordX = Math.floor(node.getBoundingClientRect().x);
-            this.compareCoords(this._dog, node, cordY, cordX, index);
+            this.compareCoords(this.dog, node, cordY, cordX, index);
 
         })
     }
@@ -33,7 +36,7 @@ class PositionOfElement {
         const dogHeight = this.getPositions(posOfDog, dogPosY).height;
         const detectColisionY = dogPosY >= cordY && dogHeight <= cordY;
         const detectColisionX = dogPosX + 350 >= cordX && dogPosX <= cordX;
-        this.checkIfColisionHappend(detectColisionX,detectColisionY,node,index)
+        this.checkIfColisionHappend(detectColisionX,detectColisionY,node,index);
     }
 
     checkIfColisionHappend(detectX,detectY,node,index){
@@ -53,9 +56,10 @@ class PositionOfElement {
         }
     }
     addToScore(){
-        this._score++;
-        this._scoreElement.textContent = this._score;
+        this.score++;
+        //this._scoreElement.textContent = this._score;
     }
+
     startEngine() {
         this.engine = setInterval(() => {
             this.repeatOfCheckingElementPos();
