@@ -5,9 +5,11 @@ const button = document.querySelector('.startButton');
 const fonts = document.querySelectorAll('.additional');
 const start = document.querySelector(".startButton");
 const finish = document.querySelector(".finish");
+const pointElement = document.querySelector('.points__numbers');
 const buttonInstruction = document.querySelector(".instruction");
 const nots = document.querySelector(".notes");
-const heightEngine = new Position(-100);
+const heightEngine = new Position();
+
 function buttonMove() {
     start.classList.add("active");
     finish.classList.add("active");
@@ -54,6 +56,7 @@ buttonInstruction.addEventListener("click",showInstruction);
 
 
 (function startGame() {
+    heightEngine.scoreInfo = pointElement;
     heightEngine.dogElement = photoDog;
     heightEngine.elementNode = fonts;
     heightEngine.startEngine();

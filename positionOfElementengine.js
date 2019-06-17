@@ -1,16 +1,25 @@
 class PositionOfElement {
-    constructor() {}
+    constructor(){
+        this.score = 0;
+    }
     set dogElement(dog) {
-        this._dog = dog;
+        this.dog = dog;
     }
     set elementNode(elm) {
         this.arrayOfNodes = [...elm];
     }
+    set scoreInfo(score){
+        this._scoreElement = score;
+    }
+    get pictureWidth(){
+        return this.dog.getBoundingClientRect().width;
+     }
+
     repeatOfCheckingElementPos() {
         this.arrayOfNodes.forEach((node, index) => {
             const cordY = node.getBoundingClientRect().y
             const cordX = Math.floor(node.getBoundingClientRect().x);
-            this.compareCoords(this._dog, node, cordY, cordX, index);
+            this.compareCoords(this.dog, node, cordY, cordX, index);
 
         })
     }
@@ -28,7 +37,7 @@ class PositionOfElement {
         const dogHeight = this.getPositions(posOfDog, dogPosY).height;
         const detectColisionY = dogPosY >= cordY && dogHeight <= cordY;
         const detectColisionX = dogPosX + 350 >= cordX && dogPosX <= cordX;
-        this.checkIfColisionHappend(detectColisionX,detectColisionY,node,index)
+        this.checkIfColisionHappend(detectColisionX,detectColisionY,node,index);
     }
 
     checkIfColisionHappend(detectX,detectY,node,index){
@@ -41,11 +50,19 @@ class PositionOfElement {
     checkIfWin(node) {
         if (node.dataset.key) {
             this.arrayOfNodes.forEach(node => {
-                node.style.display = 'none';
+              //  node.style.display = 'none';
             })
-            this.stopEngine();
+           // this.stopEngine();
+        }else{
+            this.addToScore();
         }
     }
+    addToScore(){
+        this.score += 10;
+        console.log(this.score);
+        this._scoreElement.textContent = this.score;
+    }
+
     startEngine() {
         this.engine = setInterval(() => {
             this.repeatOfCheckingElementPos();
