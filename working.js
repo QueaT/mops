@@ -2,13 +2,14 @@ import Position from './positionOfElementengine.js';
 
 const photoDog = document.querySelector(".image--dog");
 const button = document.querySelector('.startButton');
+const lifeElements = document.querySelectorAll('.fa-heart');
 const fonts = document.querySelectorAll('.additional');
 const start = document.querySelector(".startButton");
 const finish = document.querySelector(".finish");
 const pointElement = document.querySelector('.points__numbers');
 const buttonInstruction = document.querySelector(".instruction");
 const nots = document.querySelector(".notes");
-const heightEngine = new Position();
+const heightEngine = new Position(lifeElements);
 
 function buttonMove() {
     start.classList.add("active");
@@ -18,29 +19,16 @@ function buttonMove() {
 start.addEventListener("click", buttonMove);
 
 button.addEventListener('click', () => {
-    const arrayOfDelays = [];
-    fonts.forEach(font => {
-        font.style.transitionDelay = genereteRandomDelay(30,1,arrayOfDelays) + 's';
-        arrayOfDelays.push(parseInt(font.style.transitionDelay));
-        font.classList.add('active');
-    })
+     heightEngine.setFoodDelay();
 })
 
 
-function genereteRandomDelay(max, min,accualValues) {
-    const randomNum =  Math.floor(Math.random() * max) + min;
-    if(accualValues.includes(randomNum)){
-       return genereteRandomDelay(max,min,accualValues)
-    }else{
-        return randomNum;
-    }
-}
-
 function photoMove(e) {
-    const radius = 350 / 2;
+    const dogWidth = photoDog.getBoundingClientRect().width;
+    const radius = dogWidth / 2;
     const posX = e.pageX - radius;
     const documentWidth = window.innerWidth;
-    if (e.pageX >= 350 / 2 && e.pageX < documentWidth - radius) {
+    if (e.pageX >= dogWidth / 2 && e.pageX < documentWidth - radius) {
         photoDog.style.left = posX + 'px';
     }
 }
