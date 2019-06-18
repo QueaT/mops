@@ -1,7 +1,7 @@
 class HealthState {
     constructor(nodes){
-        this._lifeNumber = nodes.length - 1;
-        this._nodes = nodes;
+        this._lifeNumber = 0 || nodes.length - 1;
+        this._nodes = null || nodes;
     }
 
 
@@ -16,7 +16,7 @@ class HealthState {
     }
     checkIfLifeNumberIsValid(){
         if(this.lifeNumber < 0){
-           console.log('lost')
+          alert('Przegrales :(')
            this.resetState();
            return true;
         }

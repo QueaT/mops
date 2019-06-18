@@ -48,7 +48,6 @@ class PositionOfElement extends healthState {
     checkIfColisionHappend(detectX, detectY, node, index) {
         if (detectY && detectX) {
             node.classList.add('none');
-            console.log(node,'none')
             this.checkIfWin(node)
         }
     }
@@ -69,7 +68,6 @@ class PositionOfElement extends healthState {
             node.classList.remove('active');
             node.style.transition = 'unset'; 
             node.classList.remove('none');
-            console.log(node)
         })
         setTimeout(() => {
            this.setFoodDelay();
