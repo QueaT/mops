@@ -157,14 +157,14 @@ body{
     transition: .6s linear;
     transform: scale(.3);
 }
-.finish{
+.finish__win{
     color: rgb(230, 23, 85);
     letter-spacing: 2px;
     font-size: 22px;
     position: absolute;
     width: 700px;
     text-align: center;
-    line-height: 150px;
+    line-height: 130px;
     background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
     top: 50%;
     left: 50%;
@@ -173,9 +173,51 @@ body{
     opacity: 0;
     
 }
-.finish.active{
+.finish__win.active{
     opacity: 1;
-    transition: .3s 31s linear;
+    transition: .3s 32s linear;
+}
+.finish__lose{
+    color: rgb(255, 0, 0);
+    letter-spacing: 7px;
+    border: 5px solid red;
+    font-family: 'Monoton', cursive;
+    text-transform: uppercase;
+    font-size: 28px;
+    position: absolute;
+    width: 700px;
+    text-align: center;
+    line-height: 150px;
+    background-color: black;
+    top: 45%;
+    left: 50%;
+    max-height: 350px;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+.game--over{
+    margin-top: 40px;
+}
+.play--again{
+    color: rgb(255, 0, 0);
+    letter-spacing: 4px;
+    font-family: 'Monoton', cursive;
+    text-transform: uppercase;
+    font-size: 25px;
+    width: 400px;
+    text-align: center;
+    line-height: 60px;
+    outline: none;
+    background-color: rgb(44, 44, 44);
+    border: none;
+    border-radius: 2%;
+    transform: scale(1);
+    transition: .2s linear;
+    margin-bottom: 10px;
+}
+.play--again:hover{
+transform: scale(1.1);
+background-color:rgb(70, 70, 70);
 }
 
 .instruction{
