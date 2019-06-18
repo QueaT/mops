@@ -1,6 +1,5 @@
 class PositionOfElement {
     #score = 0;
-    #dog;
     set dogElement(dog) {
         this.dog = dog;
     }
