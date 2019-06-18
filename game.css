@@ -4,10 +4,12 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url("backround.jpg");
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
 }
 .container{
@@ -22,7 +24,7 @@ body{
     position: absolute;
     bottom: 0;
 }
-.fas, .fab{
+.additional, .fab{
     font-size: 70px;
     position: absolute;
 }
@@ -121,7 +123,7 @@ body{
         top: -100px;
         transition: 3s  linear; 
     }
-    .fas.active,
+    .additional.active,
     .fab.active{
         top: 100%;
     }
@@ -134,9 +136,8 @@ body{
 .startButton{
     font-size: 45px;
     position: absolute;
-    top: calc(50% - 25px);
-    left: calc(50% - 200px);
-    transform: (-50%, -50%);
+    top: calc(50% - 75px);
+    left:calc(50% - 12vw);
     padding: 40px;
     background-color: rgb(219, 255, 253);
     text-transform: uppercase;
@@ -146,13 +147,13 @@ body{
     outline: none;
     cursor: pointer;
     border-radius: 10px;
-    line-height: 50px;
-    width: 400px;
+    height: 150px;
+    width: 24vw;
     transform: scale(1);
 } 
 .startButton.active{
-    top: 0;
-    left: 84vw;
+    top: 2%;
+    left: 83vw;
     transition: .6s linear;
     transform: scale(.3);
 }
@@ -235,4 +236,33 @@ background-image: linear-gradient(to top,  #aed7fd 0%, rgb(219, 255, 253) 100%);
 .notes.active{
     display: flex;
     transition: .3s linear;
+}
+.lifes{
+width: 130px;
+height: 10%;
+color: red;
+font-size: 27px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 30px;
+}
+.container__lifes{
+    width: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.points{
+    font-size: 30px;
+    font-family: 'Domine', serif;
+    display: flex;
+    margin: 15px  30px 0 0 ;
+}
+.points__numbers{
+color: red;
+}
+.fa-dice{
+    margin-right: 15px;
+    color: #4020f8;
 }

@@ -1,5 +1,7 @@
 class PositionOfElement {
-    #score = 0;
+    constructor(){
+        this.score = 0;
+    }
     set dogElement(dog) {
         this.dog = dog;
     }
@@ -43,20 +45,22 @@ class PositionOfElement {
             this.checkIfWin(node)
             this.arrayOfNodes.splice(index, 1);
             node.style.display = 'none';
-            this.addToScore();
         }
     }
     checkIfWin(node) {
         if (node.dataset.key) {
             this.arrayOfNodes.forEach(node => {
-                node.style.display = 'none';
+              //  node.style.display = 'none';
             })
-            this.stopEngine();
+           // this.stopEngine();
+        }else{
+            this.addToScore();
         }
     }
     addToScore(){
-        this.score++;
-        //this._scoreElement.textContent = this._score;
+        this.score += 10;
+        console.log(this.score);
+        this._scoreElement.textContent = this.score;
     }
 
     startEngine() {
