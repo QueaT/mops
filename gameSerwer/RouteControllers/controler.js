@@ -5,8 +5,8 @@ const JWT = require('jsonwebtoken');
 
 
 module.exports = {
-    redirect: async(req,res,next)=>{
-      res.redirect('/login');
+    redirect: async (req,res,next) =>{
+     res.redirect('/login');
     },
     register: async (req, res, next) => {
         res.sendFile(path.join(global.base_dir + '/pages' + '/register.html'));
