@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(60deg, #206196 0%, #b8f8ea 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+}
+.main--container{
+    margin: auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url(/img/loginphoto.jpg);
+    height: 85vh;
+    width: 100vw;
+    background-size: cover;
+    background-position-y: 79%;
+}
+.login--window{
+    margin-left: 17rem;
+display: flex;
+flex-direction: column;
+width: 34vw;
+height: 80vh;
+justify-content: flex-start;
+background-color: white;
+border-radius: 2%;
+border: 2px solid rgb(97, 192, 255);
+}
+.login{
+    line-height: 100px;
+    width: 14vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    letter-spacing: 2px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+}
+.windows{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    width: 34vw;
+    flex-direction: column;
+}
+.window-input{
+font-size: 14px;
+letter-spacing: 1px;
+font-family: 'Barlow', sans-serif;
+height: 6vh;
+text-transform: uppercase;
+width: 30vw;
+border: none;
+outline: none;
+border-bottom: 2px solid rgb(68, 68, 68);
+}
+.smaller--window{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 130px;
+}
+.singin--button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 34vw;
+}
+.sing--in__button{
+    width: 310px;
+    border-radius: 2%;
+    font-size: 24px;
+    color: white;
+    background-color: rgb(154, 209, 255);
+    font-family: 'Barlow', sans-serif;
+    letter-spacing: 1px;
+    line-height: 70px;
+    transition: .1s linear;
+}
+.sing--in__button:hover{
+    background-color: rgb(105, 188, 255)
+}
+.go--game__container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 170px;
+    width: 100%;
+}
+.go-game__button{
+    width: 120px;
+    border-radius: 50px;
+    font-size: 16px;
+    color: white;
+    margin-right: 1rem;
+    background-color: rgb(243, 41, 109);
+    font-family: 'Barlow', sans-serif;
+    letter-spacing: 1px;
+    line-height: 36px;
+    transition: .1s linear;
+}
+.go-game__button:hover{
+    background-color: rgb(192, 13, 81);
+}
+.new--account{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 34vw;
+    font-size: 15px;
+    font-family: 'Barlow', sans-serif;
+}
+span{
+    color: #5ca7fd;
+    cursor: pointer;
+}
