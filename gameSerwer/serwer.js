@@ -13,7 +13,7 @@ const app = express();
 
 
 
-mongoose.connect(`mongodb+srv://admin:Eminem007d@cluster0-ofgrv.mongodb.net/test?retryWrites=true`, {
+mongoose.connect(`mongodb+srv://admin:${config.db}@cluster0-ofgrv.mongodb.net/test?retryWrites=true`, {
     useNewUrlParser: true
 })
 
@@ -24,10 +24,7 @@ app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/game'));
 
-app.use(cors({
-    origin: 'https://dog-project-node.herokuapp.com'
-  }));
-
+app.use(cors());
 
 //Routes
 

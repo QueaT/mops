@@ -11,7 +11,7 @@ button.addEventListener('click', async () => {
             password: "Eminem007d"
         })
         tokenState.tokenID = user.data.token
-        window.location.href = `http://localhost:3000/game/${tokenState.token}`;
+        window.location.href = `https://dog-project-node.herokuapp.com/game/${tokenState.token}`;
     } catch (err) {
         console.log(err);
     }
