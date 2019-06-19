@@ -1,5 +1,6 @@
 import Position from './positionOfElementengine.js';
 
+
 const photoDog = document.querySelector(".image--dog");
 const button = document.querySelector('.startButton');
 const lifeElements = document.querySelectorAll('.fa-heart');
@@ -21,6 +22,7 @@ start.addEventListener("click", buttonMove);
 button.addEventListener('click', () => {
      heightEngine.setFoodDelay();
 })
+
 
 
 function photoMove(e) {
