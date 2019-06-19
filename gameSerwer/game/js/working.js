@@ -1,4 +1,5 @@
-import Position from './positionOfElementengine.js';
+import Position from './gameComponents/positionOfElementengine.js';
+import GameControl from './gameComponents/gameControls.js';
 
 
 const photoDog = document.querySelector(".image--dog");
@@ -6,11 +7,16 @@ const button = document.querySelector('.startButton');
 const lifeElements = document.querySelectorAll('.fa-heart');
 const fonts = document.querySelectorAll('.additional');
 const start = document.querySelector(".startButton");
-const finish = document.querySelector(".finish");
+const finish = document.querySelector(".finish__win");
+const refreshGameElement = document.querySelector('.play--again');
 const pointElement = document.querySelector('.points__numbers');
+const endGamePopUp = document.querySelector('.finish__lose');
 const buttonInstruction = document.querySelector(".instruction");
 const nots = document.querySelector(".notes");
-const heightEngine = new Position(lifeElements);
+
+
+const gameControl = new GameControl(fonts);
+const heightEngine = new Position(lifeElements,endGamePopUp,gameControl);
 
 function buttonMove() {
     start.classList.add("active");
@@ -20,9 +26,13 @@ function buttonMove() {
 start.addEventListener("click", buttonMove);
 
 button.addEventListener('click', () => {
-     heightEngine.setFoodDelay();
+    gameControl.setFoodDelay();
 })
 
+refreshGameElement.addEventListener('click',()=>{
+    heightEngine.refreshState = true;
+    endGamePopUp.classList.remove('active');
+})  
 
 
 function photoMove(e) {
@@ -46,7 +56,7 @@ buttonInstruction.addEventListener("click",showInstruction);
 
 
 (function startGame() {
-    heightEngine.scoreInfo = pointElement;
+    gameControl.scoreInfo = pointElement;
     heightEngine.dogElement = photoDog;
     heightEngine.elementNode = fonts;
     heightEngine.startEngine();

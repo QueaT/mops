@@ -1,7 +1,8 @@
 class HealthState {
-    constructor(nodes){
-        this._lifeNumber = 0 || nodes.length - 1;
-        this._nodes = null || nodes;
+    constructor(nodes,endPopUp){
+        this._lifeNumber = nodes.length - 1;
+        this._nodes = nodes;
+        this._endPopUp = endPopUp;
     }
 
 
@@ -16,7 +17,7 @@ class HealthState {
     }
     checkIfLifeNumberIsValid(){
         if(this.lifeNumber < 0){
-          alert('Przegrales :(')
+         this._endPopUp.classList.add('active');
            this.resetState();
            return true;
         }
