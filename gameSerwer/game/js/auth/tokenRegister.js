@@ -5,7 +5,7 @@ const button = document.querySelector('button');
 
 button.addEventListener('click', async () => {
     try {
-        const user = await axios.post('http://localhost:3000/register', {
+        const user = await axios.post('https://dog-project-node.herokuapp.com/register', {
             email: "ziomek@wp.pl",
             nick: "Qu",
             password: "Eminem007d"

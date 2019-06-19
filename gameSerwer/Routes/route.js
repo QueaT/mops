@@ -10,7 +10,8 @@ const middleWare = require('../Auth/authorization');
 
 
 
-
+router.route('/')
+.get(userControler.redirect)
 
 router.route('/register')
  .get(userControler.register)

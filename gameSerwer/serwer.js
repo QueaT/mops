@@ -4,13 +4,14 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const port = process.env.PORT || 3000;
 const config = require('./config');
-
-
+var cors = require('cors')
 
 const routes = require('./Routes/route');
 var path = require('path');
 
 const app = express();
+
+
 
 mongoose.connect(`mongodb+srv://admin:Eminem007d@cluster0-ofgrv.mongodb.net/test?retryWrites=true`, {
     useNewUrlParser: true
@@ -22,6 +23,10 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/game'));
+
+app.use(cors({
+    origin: 'https://dog-project-node.herokuapp.com'
+  }));
 
 
 //Routes
