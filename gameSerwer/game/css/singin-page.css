@@ -34,7 +34,7 @@ border: 2px solid rgb(97, 192, 255);
 }
 .login{
     line-height: 100px;
-    width: 14vw;
+    width: 45%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,6 +75,7 @@ border-bottom: 2px solid rgb(68, 68, 68);
     justify-content: center;
     height: 100px;
     width: 34vw;
+   
 }
 .sing--in__button{
     width: 310px;
@@ -90,38 +91,81 @@ border-bottom: 2px solid rgb(68, 68, 68);
 .sing--in__button:hover{
     background-color: rgb(105, 188, 255)
 }
-.go--game__container{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    height: 170px;
-    width: 100%;
-}
-.go-game__button{
-    width: 120px;
-    border-radius: 50px;
-    font-size: 16px;
-    color: white;
-    margin-right: 1rem;
-    background-color: rgb(243, 41, 109);
-    font-family: 'Barlow', sans-serif;
-    letter-spacing: 1px;
-    line-height: 36px;
-    transition: .1s linear;
-}
-.go-game__button:hover{
-    background-color: rgb(192, 13, 81);
-}
 .new--account{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 150px;
     width: 34vw;
     font-size: 15px;
     font-family: 'Barlow', sans-serif;
 }
+
 span{
     color: #5ca7fd;
     cursor: pointer;
+    outline: none;
+}
+@media (max-width:1111px){
+    .login--window{
+        margin-left: 9rem;
+    }
+    .new--account {
+        width: 33vw;
+        text-align: center;
+    }
+    .sing--in__button{
+        width: 260px;
+    }
+    .main--container{
+        background-position-x: 68%;
+    }
+}
+@media (max-width:900px){
+    .login--window{
+        margin-left: 0;
+        width: 48vw;
+        height: 85vh;
+    }
+    .windows{
+        width: 48vw;
+    }
+    .singin--button{
+        width: 48vw;
+    }
+
+.new--account{
+    width: 48vw;
+}
+.create--acc{
+margin: 1rem;
+}
+.sing--in__button{
+    width: 200px;
+}
+}
+@media(max-width:670px){
+    .window-input{
+        width: 300px;
+    } 
+     .windows{
+        width: 100%;
+    }
+    .sing--in__button{
+        width: 300px;
+    }
+    .singin--button{
+        width: 100%
+    }
+    .new--account{
+        width: 100%;
+    }
+    .login--window{
+width: 100%;
+    }
+}
+@media(max-width:350px){
+    .window-input{
+        width: 200px;
+    }
 }
