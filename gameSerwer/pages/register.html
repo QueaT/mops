@@ -1,17 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Amiko:400,700|Playfair+Display+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/register.css" type="text/css" />
 
 </head>
+
 <body>
-    <p>Register Page</p>
-    <button>Dodaj nowego uzytkownika</button>
+    <div class="main--page">
+        <div class="register--page">
+            <div class="main--container">
+            <div class="register-txt">
+                <p class="register">Register</p>
+            </div>
+            <form action="">
+            <div class="windows">
+                <input placeholder="USERNAME" class="username--window io" type="text"></input>
+                <input placeholder="EMAIL" class="email--window io" type="text"></input>
+                <input placeholder="PASSWORD" class="password--window io" type="password"></input>
+            
+        
+            <div class="rules-check">
+                <input type="checkbox" class="rules">I Accept privacy policy</input>
+            </div>
+        </div>
+            <div class="create--acc__button">
+                <button class="create--acc">Create an account</button>
+            </div>
+        </form>
+        <p class="singin--txt">Do you have an account? <a class="login" href="https://dog-project-node.herokuapp.com/login/">Sing in</a> now</p>
+            </div>
+        </div>
+    </div>
 </body>
 
 <script type="module" src="/js/auth/tokenRegister.js"></script>
+
 </html>

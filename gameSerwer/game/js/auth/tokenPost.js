@@ -26,7 +26,6 @@ async function postUser() {
         const user = await axios.post('https://dog-project-node.herokuapp.com/login', {
             email: inputsValues.email,
             password: inputsValues.password,
-            nick:'ok'
         })
         tokenState.tokenID = user.data.token
         window.location.href = `https://dog-project-node.herokuapp.com/game/${tokenState.token}`;

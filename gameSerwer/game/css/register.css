@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main--page {
+    background-image: url(/img/backgrounddoge.jpg);
+    background-position-y: 50%;
+    width: 100vw;
+    height: 100vh;
+}
+
+.register--page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.register-txt {
+    display: flex;
+    width: 60%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-family: 'Playfair Display SC', serif;
+    font-size: 33px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.windows {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.io {
+    padding-bottom: 10px;
+    margin: 1.5rem;
+    transition: 0.2s ease-in-out;
+    width: 394px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-family: 'Barlow', sans-serif;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(68, 68, 68);
+}
+.io:focus{
+    padding-bottom: 15px;
+}
+
+.main--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 96vh;
+    width: 40%;
+}
+
+.rules-check {
+    display: flex;
+    height: 92px;
+    width: 380px;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 14px;
+    color: rgb(114, 114, 114);
+    letter-spacing: 1px;
+    font-family: 'Barlow', sans-serif;
+}
+
+.rules {
+    margin-right: 10px;
+    border: 0;
+}
+
+.create--acc__button {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+.create--acc{
+    width: 300px;
+    line-height: 50px;
+    border-radius: 50px;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    font-family: 'Barlow', sans-serif;
+    background-color: rgb(85, 85, 85);
+    transition: .2s linear;
+    cursor: pointer;
+}
+.create--acc:hover{
+    background-color: rgb(22, 22, 22);
+}
+.singin--txt{
+    color: rgb(114, 114, 114);
+    font-size: 15px;
+    font-family: 'Barlow', sans-serif;
+}
+.login{
+    text-decoration: none;
+    color: rgb(149, 178, 255);
+}
+.login:hover{
+color: rgb(134, 142, 255);
+}
